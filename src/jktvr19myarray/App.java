@@ -7,6 +7,7 @@ package jktvr19myarray;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -15,10 +16,23 @@ import java.util.Random;
 public class App {
     public void run(){
         System.out.println(" ------- Работа с массивами ------- ");
-        int myArr[] = new int[20];
+        
+        System.out.print("Количество чисел в массиве: ");
+        Scanner scanner = new Scanner(System.in);
+        int quantity = scanner.nextInt();
+        int myArr[] = new int[quantity];
+        
+        System.out.println("Введите желаемый диапазон");
+        System.out.print("От ");
+        Scanner scanner1 = new Scanner(System.in);
+        int beginNum = scanner1.nextInt();
+        System.out.print("до ");
+        Scanner scanner2 = new Scanner(System.in);
+        int endNum = scanner2.nextInt();
+        
         Random random = new Random();
         for (int i=0; i < myArr.length; i++) {
-            myArr[i]=random.nextInt(19-0+1)-0;
+            myArr[i]=random.nextInt(endNum-beginNum+1)-beginNum;
         }
         
         /* //так можно вывести только четные числа
