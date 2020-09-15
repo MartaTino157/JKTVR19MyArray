@@ -32,7 +32,7 @@ public class App {
         
         Random random = new Random();
         for (int i=0; i < myArr.length; i++) {
-            myArr[i]=random.nextInt(endNum-beginNum+1)-beginNum;
+            myArr[i]=random.nextInt(endNum-beginNum+1)+beginNum;
         }
         
         /* //так можно вывести только четные числа
